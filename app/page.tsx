@@ -73,10 +73,10 @@ export default function Home() {
         {/* Luxury Wordmark Logo */}
         <div className="flex flex-col items-start select-none">
           <span className="text-xl md:text-2xl font-serif tracking-[0.25em] font-light text-stone-900 leading-none">
-            SWAN OCEAN
+            SWAN OCEAN STAYS
           </span>
           <span className="text-[9px] uppercase tracking-[0.42em] text-stone-500 mt-1.5 font-medium pl-0.5">
-            Stays &amp; Hospitality
+            HOSPITALITY
           </span>
         </div>
         <div className="hidden md:flex space-x-8 text-sm uppercase tracking-wider text-stone-600">
