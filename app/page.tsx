@@ -6,7 +6,35 @@ export default function Home() {
   // Form submission states
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formMessage, setFormMessage] = useState("");
+  // Mapbox Address Autocomplete States
+  const [address, setAddress] = useState("");
+  const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [showDropdown, setShowDropdown] = useState(false);
 
+  const handleAddressChange = async (input: string) => {
+    setAddress(input);
+    if (input.length < 3) {
+      setSuggestions([]);
+      return;
+    }
+
+    try {
+      // REPLACE THE STRING BELOW WITH YOUR ACTUAL MAPBOX PUBLIC TOKEN
+      const mapboxToken = "pk.eyJ1IjoibmF0ZWJlZHdhcmRzIiwiYSI6ImNtcm8wbGIyejAzbjQyd3ExZG5wcXpuc3oifQ.iNsvxsvVmhKPovjFcd7Flw";
+      const response = await fetch(
+        `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(input)}.json?access_token=${mapboxToken}&country=us&types=address&limit=5`
+      );
+      const data = await response.json();
+
+      if (data.features) {
+        const list = data.features.map((feature: any) => feature.place_name);
+        setSuggestions(list);
+        setShowDropdown(true);
+      }
+    } catch (error) {
+      console.error("Mapbox fetching error:", error);
+    }
+  };
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -126,9 +154,37 @@ export default function Home() {
             </div>
             {/* Row 2: Property Address & Phone */}
             <div className="grid md:grid-cols-2 gap-6">
-              <div>
+              <div className="relative">
                 <label className="block text-xs uppercase tracking-wider text-stone-600 mb-2 font-medium">Property Address</label>
-                <input type="text" name="address" required className="w-full border border-stone-300 p-3 text-sm focus:outline-none focus:border-stone-500" placeholder="123 Ocean Blvd, Vilano Beach, FL" />
+                <input 
+                  type="text" 
+                  name="address" 
+                  required 
+                  value={address}
+                  onChange={(e) => handleAddressChange(e.target.value)}
+                  onFocus={() => address.length >= 3 && setShowDropdown(true)}
+                  className="w-full border border-stone-300 p-3 text-sm focus:outline-none focus:border-stone-500" 
+                  placeholder="123 Ocean Blvd, Vilano Beach, FL" 
+                  autoComplete="off"
+                />
+                
+                {/* Luxury Autocomplete Dropdown */}
+                {showDropdown && suggestions.length > 0 && (
+                  <ul className="absolute z-50 left-0 right-0 mt-1 bg-white border border-stone-200 shadow-lg max-h-60 overflow-y-auto text-sm text-stone-700">
+                    {suggestions.map((suggestion, index) => (
+                      <li 
+                        key={index}
+                        onClick={() => {
+                          setAddress(suggestion);
+                          setShowDropdown(false);
+                        }}
+                        className="p-3 hover:bg-stone-50 cursor-pointer border-b border-stone-100 last:border-b-0 transition"
+                      >
+                        {suggestion}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
               <div>
                 <label className="block text-xs uppercase tracking-wider text-stone-600 mb-2 font-medium">Phone Number</label>
