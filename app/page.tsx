@@ -70,8 +70,14 @@ export default function Home() {
     <div className="min-h-screen bg-[#faf9f6] text-[#2c3e50] font-sans">
       {/* Navigation */}
       <nav className="border-b border-stone-200 bg-white/80 backdrop-blur-md sticky top-0 z-50 px-6 py-4 flex justify-between items-center">
-        <div className="text-xl font-serif tracking-widest font-semibold text-stone-800">
-          SWAN OCEAN STAYS
+        {/* Luxury Wordmark Logo */}
+        <div className="flex flex-col items-start select-none">
+          <span className="text-xl md:text-2xl font-serif tracking-[0.25em] font-light text-stone-900 leading-none">
+            SWAN OCEAN
+          </span>
+          <span className="text-[9px] uppercase tracking-[0.42em] text-stone-500 mt-1.5 font-medium pl-0.5">
+            Stays &amp; Hospitality
+          </span>
         </div>
         <div className="hidden md:flex space-x-8 text-sm uppercase tracking-wider text-stone-600">
           <a href="#services" className="hover:text-stone-900 transition">Services</a>
@@ -156,23 +162,23 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="relative">
                 <label className="block text-xs uppercase tracking-wider text-stone-600 mb-2 font-medium">Property Address</label>
-                <input 
-                  type="text" 
-                  name="address" 
-                  required 
+                <input
+                  type="text"
+                  name="address"
+                  required
                   value={address}
                   onChange={(e) => handleAddressChange(e.target.value)}
                   onFocus={() => address.length >= 3 && setShowDropdown(true)}
-                  className="w-full border border-stone-300 p-3 text-sm focus:outline-none focus:border-stone-500" 
-                  placeholder="123 Ocean Blvd, Vilano Beach, FL" 
+                  className="w-full border border-stone-300 p-3 text-sm focus:outline-none focus:border-stone-500"
+                  placeholder="123 Ocean Blvd, Vilano Beach, FL"
                   autoComplete="off"
                 />
-                
+
                 {/* Luxury Autocomplete Dropdown */}
                 {showDropdown && suggestions.length > 0 && (
                   <ul className="absolute z-50 left-0 right-0 mt-1 bg-white border border-stone-200 shadow-lg max-h-60 overflow-y-auto text-sm text-stone-700">
                     {suggestions.map((suggestion, index) => (
-                      <li 
+                      <li
                         key={index}
                         onClick={() => {
                           setAddress(suggestion);
