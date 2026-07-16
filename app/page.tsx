@@ -1,6 +1,43 @@
 "use client";
 
+import { useState } from "react";
+
 export default function Home() {
+  // Form submission states
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formMessage, setFormMessage] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setFormMessage("");
+
+    const formData = new FormData(e.currentTarget);
+    
+    // REPLACE THIS TRIPLE-X STRING WITH THE ACCESS KEY YOU RECEIVED IN YOUR EMAIL
+    formData.append("access_key", "04f5b68e-e1bb-4a89-9184-c3908c782d45");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setFormMessage("Thank you! Your request has been sent. We will be in touch shortly.");
+        (e.target as HTMLFormElement).reset();
+      } else {
+        setFormMessage("Something went wrong. Please try again or email us directly.");
+      }
+    } catch (error) {
+      setFormMessage("Network error. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-[#faf9f6] text-[#2c3e50] font-sans">
       {/* Navigation */}
@@ -13,7 +50,7 @@ export default function Home() {
           <a href="#owners" className="hover:text-stone-900 transition">For Owners</a>
           <a href="#contact" className="hover:text-stone-900 transition">Contact</a>
         </div>
-        <a href="#contact" className="bg-stone-800 hover:bg-stone-900 text-white text-xs uppercase tracking-wider px-5 py-2.5 transition">
+        <a href="#owners" className="bg-stone-800 hover:bg-stone-900 text-white text-xs uppercase tracking-wider px-5 py-2.5 transition">
           Get a Revenue Estimate
         </a>
       </nav>
@@ -76,24 +113,35 @@ export default function Home() {
             <p className="text-stone-500 font-light text-sm">Receive a complimentary data-backed revenue projection for your property.</p>
           </div>
 
-          <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label className="block text-xs uppercase tracking-wider text-stone-600 mb-2 font-medium">Your Name</label>
-                <input type="text" className="w-full border border-stone-300 p-3 text-sm focus:outline-none focus:border-stone-500" placeholder="John Smith" />
+                <input type="text" name="name" required className="w-full border border-stone-300 p-3 text-sm focus:outline-none focus:border-stone-500" placeholder="John Smith" />
               </div>
               <div>
                 <label className="block text-xs uppercase tracking-wider text-stone-600 mb-2 font-medium">Email Address</label>
-                <input type="email" className="w-full border border-stone-300 p-3 text-sm focus:outline-none focus:border-stone-500" placeholder="john@example.com" />
+                <input type="email" name="email" required className="w-full border border-stone-300 p-3 text-sm focus:outline-none focus:border-stone-500" placeholder="john@example.com" />
               </div>
             </div>
             <div>
               <label className="block text-xs uppercase tracking-wider text-stone-600 mb-2 font-medium">Property Address</label>
-              <input type="text" className="w-full border border-stone-300 p-3 text-sm focus:outline-none focus:border-stone-500" placeholder="123 Ocean Blvd, Vilano Beach, FL" />
+              <input type="text" name="address" required className="w-full border border-stone-300 p-3 text-sm focus:outline-none focus:border-stone-500" placeholder="123 Ocean Blvd, Vilano Beach, FL" />
             </div>
-            <button type="submit" className="w-full bg-stone-800 hover:bg-stone-900 text-white text-sm uppercase tracking-widest py-4 transition font-medium">
-              Request Free Analysis
+            
+            <button 
+              type="submit" 
+              disabled={isSubmitting}
+              className="w-full bg-stone-800 hover:bg-stone-900 text-white text-sm uppercase tracking-widest py-4 transition font-medium disabled:bg-stone-400"
+            >
+              {isSubmitting ? "Sending..." : "Request Free Analysis"}
             </button>
+
+            {formMessage && (
+              <p className="text-center text-sm font-medium pt-2 text-stone-700">
+                {formMessage}
+              </p>
+            )}
           </form>
         </div>
       </section>
