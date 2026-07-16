@@ -20,7 +20,6 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative h-[80vh] flex items-center justify-center bg-stone-900 text-white px-6">
-        {/* Placeholder background color. Later you can add a stunning coastal image here */}
         <div className="absolute inset-0 bg-gradient-to-r from-stone-900/80 to-stone-800/40 bg-cover bg-center mix-blend-overlay" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80')" }}></div>
         
         <div className="relative max-w-4xl text-center space-y-6">
@@ -51,7 +50,7 @@ export default function Home() {
           <div className="space-y-4">
             <h3 className="text-xl font-serif text-stone-800">Interior Styling & Marketing</h3>
             <p className="text-stone-600 font-light leading-relaxed">
-              We optimize your home's aesthetic for high-end travelers and use professional media assets to dominate listings.
+              We optimize your home&apos;s aesthetic for high-end travelers and use professional media assets to dominate listings.
             </p>
           </div>
           <div className="space-y-4">
@@ -73,7 +72,7 @@ export default function Home() {
       <section id="owners" className="bg-stone-100 py-20 px-6">
         <div className="max-w-3xl mx-auto bg-white p-8 md:p-12 shadow-sm border border-stone-200">
           <div className="text-center mb-8 space-y-2">
-            <h2 className="text-2xl md:text-3xl font-serif text-stone-800">What is your home's earning potential?</h2>
+            <h2 className="text-2xl md:text-3xl font-serif text-stone-800">What is your home&apos;s earning potential?</h2>
             <p className="text-stone-500 font-light text-sm">Receive a complimentary data-backed revenue projection for your property.</p>
           </div>
 
