@@ -13,7 +13,7 @@ export default function Home() {
     setFormMessage("");
 
     const formData = new FormData(e.currentTarget);
-    
+
     // REPLACE THIS TRIPLE-X STRING WITH THE ACCESS KEY YOU RECEIVED IN YOUR EMAIL
     formData.append("access_key", "04f5b68e-e1bb-4a89-9184-c3908c782d45");
 
@@ -58,7 +58,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-[80vh] flex items-center justify-center bg-stone-900 text-white px-6">
         <div className="absolute inset-0 bg-gradient-to-r from-stone-900/80 to-stone-800/40 bg-cover bg-center mix-blend-overlay" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80')" }}></div>
-        
+
         <div className="relative max-w-4xl text-center space-y-6">
           <span className="text-xs uppercase tracking-[0.3em] text-stone-300 font-medium block">St. Augustine & Vilano Beach</span>
           <h1 className="text-4xl md:text-6xl font-serif tracking-wide leading-tight">
@@ -124,13 +124,27 @@ export default function Home() {
                 <input type="email" name="email" required className="w-full border border-stone-300 p-3 text-sm focus:outline-none focus:border-stone-500" placeholder="john@example.com" />
               </div>
             </div>
-            <div>
-              <label className="block text-xs uppercase tracking-wider text-stone-600 mb-2 font-medium">Property Address</label>
-              <input type="text" name="address" required className="w-full border border-stone-300 p-3 text-sm focus:outline-none focus:border-stone-500" placeholder="123 Ocean Blvd, Vilano Beach, FL" />
+            {/* Row 2: Property Address & Phone */}
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <label className="block text-xs uppercase tracking-wider text-stone-600 mb-2 font-medium">Property Address</label>
+                <input type="text" name="address" required className="w-full border border-stone-300 p-3 text-sm focus:outline-none focus:border-stone-500" placeholder="123 Ocean Blvd, Vilano Beach, FL" />
+              </div>
+              <div>
+                <label className="block text-xs uppercase tracking-wider text-stone-600 mb-2 font-medium">Phone Number</label>
+                <input type="tel" name="phone" className="w-full border border-stone-300 p-3 text-sm focus:outline-none focus:border-stone-500" placeholder="(904) 555-0123" />
+              </div>
             </div>
-            
-            <button 
-              type="submit" 
+
+            {/* Row 3: Details Textarea */}
+            <div>
+              <label className="block text-xs uppercase tracking-wider text-stone-600 mb-2 font-medium">Property Details / Notes</label>
+              <textarea name="details" rows={4} className="w-full border border-stone-300 p-3 text-sm focus:outline-none focus:border-stone-500 resize-none" placeholder="Tell us about bedrooms, special amenities, or current rental history..." />
+            </div>
+
+
+            <button
+              type="submit"
               disabled={isSubmitting}
               className="w-full bg-stone-800 hover:bg-stone-900 text-white text-sm uppercase tracking-widest py-4 transition font-medium disabled:bg-stone-400"
             >
