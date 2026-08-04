@@ -228,7 +228,7 @@ export default function Home() {
             <p className="text-stone-500 font-light text-sm">Receive a complimentary data-backed revenue projection for your property.</p>
           </div>
 
-          <form className="space-y-6" onSubmit={handleSubmit}>
+          <form id="contact" className="space-y-6" onSubmit={handleSubmit}>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label className="block text-xs uppercase tracking-wider text-stone-600 mb-2 font-medium">Your Name</label>
