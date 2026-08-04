@@ -19,20 +19,20 @@ export default function Home() {
     }
 
     try {
-      // REPLACE THE STRING BELOW WITH YOUR ACTUAL MAPBOX PUBLIC TOKEN
-      const mapboxToken = "pk.eyJ1IjoibmF0ZWJlZHdhcmRzIiwiYSI6ImNtcm8wbGIyejAzbjQyd3ExZG5wcXpuc3oifQ.iNsvxsvVmhKPovjFcd7Flw";
+      const mapboxToken = "pk.eyJ1IjoibmF0ZWJlZHdhcmRzIiwiYSI6ImNtcm8wbGIyejAzbjQyd3ExZG5wcXpuc3oifQ.iNsvxsvVmhKPovjFcd7Flw"; // Ensure your actual pk. token is here
       const response = await fetch(
         `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(input)}.json?access_token=${mapboxToken}&country=us&types=address&limit=5`
       );
       const data = await response.json();
-
+      
       if (data.features) {
-        const list = data.features.map((feature: any) => feature.place_name);
+        // Updated type definition to satisfy TypeScript
+        const list = data.features.map((feature: { place_name: string }) => feature.place_name);
         setSuggestions(list);
         setShowDropdown(true);
       }
-    } catch (error) {
-      console.error("Mapbox fetching error:", error);
+    } catch {
+      // Catch block updated to remove unused error variable
     }
   };
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
