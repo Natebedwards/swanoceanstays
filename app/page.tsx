@@ -121,9 +121,10 @@ export default function Home() {
         </div>
 
         {/* Property Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {/* Property Card 1 */}
-          <div id="reservation" className="bg-white border border-stone-200 shadow-sm overflow-hidden group">
+          {/* UPDATE THE CARD DIV TO: */}
+<div id="reservation" className="bg-white border border-stone-200 shadow-sm overflow-hidden group max-w-md w-full">
             <div className="relative h-64 overflow-hidden bg-stone-200">
               {/* Replace /property1.jpg with your photo path in public/ or an image URL */}
               <img 
