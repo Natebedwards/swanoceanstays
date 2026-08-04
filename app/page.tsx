@@ -156,7 +156,7 @@ export default function Home() {
               <div className="pt-2 flex flex-col sm:flex-row gap-3">
                 {/* REPLACE THE '#' BELOW WITH YOUR ACTUAL AIRBNB LISTING URL */}
                 <a 
-                  href="airbnb.com/h/swanocean" 
+                  href="www.airbnb.com/h/swanocean" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex-1 text-center bg-stone-800 hover:bg-stone-900 text-white text-xs uppercase tracking-wider py-3 transition font-medium"
