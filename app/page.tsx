@@ -127,7 +127,7 @@ export default function Home() {
             <div className="relative h-64 overflow-hidden bg-stone-200">
               {/* Replace /property1.jpg with your photo path in public/ or an image URL */}
               <img 
-                src="/property1.jpg" 
+                src="/Property1.jpg" 
                 alt="Swan Ocean Stays Luxury Property" 
                 className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
               />
@@ -137,16 +137,16 @@ export default function Home() {
               <div className="flex justify-between items-start">
                 <div>
                   <span className="text-[10px] uppercase tracking-widest text-stone-400 font-semibold block">Vilano Beach</span>
-                  <h3 className="text-xl font-serif text-stone-800 font-medium">The Coastal Haven</h3>
+                  <h3 className="text-xl font-serif text-stone-800 font-medium">Swan Ocean Beach House</h3>
                 </div>
               </div>
 
               <div className="flex items-center space-x-4 text-xs text-stone-500 border-y border-stone-100 py-3">
-                <span>4 Guests</span>
+                <span>10 Guests</span>
                 <span>•</span>
-                <span>2 Bedrooms</span>
+                <span>4 Bedrooms</span>
                 <span>•</span>
-                <span>2 Baths</span>
+                <span>2.5 Baths</span>
               </div>
 
               <p className="text-stone-600 text-sm font-light leading-relaxed">
