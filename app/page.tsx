@@ -138,7 +138,7 @@ export default function Home() {
               <div className="flex justify-between items-start">
                 <div>
                   <span className="text-[10px] uppercase tracking-widest text-stone-400 font-semibold block">Vilano Beach</span>
-                  <h3 className="text-xl font-serif text-stone-800 font-medium">Swan Ocean Beach House</h3>
+                  <h3 className="text-xl font-serif text-stone-800 font-medium">Oceanfront Beach House</h3>
                 </div>
               </div>
 
