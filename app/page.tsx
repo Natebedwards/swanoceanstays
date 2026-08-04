@@ -111,6 +111,70 @@ export default function Home() {
         </div>
       </section>
 
+{/* Featured Properties Section */}
+      <section id="properties" className="py-20 px-6 max-w-7xl mx-auto border-t border-stone-200">
+        <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
+          <span className="text-xs uppercase tracking-[0.3em] text-stone-500 font-medium block">Our Portfolio</span>
+          <h2 className="text-3xl font-serif text-stone-800">Featured Stays</h2>
+          <div className="h-px w-16 bg-stone-400 mx-auto"></div>
+          <p className="text-stone-500 font-light">Explore our luxury coastal accommodations in St. Augustine &amp; Vilano Beach.</p>
+        </div>
+
+        {/* Property Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Property Card 1 */}
+          <div id="reservation" className="bg-white border border-stone-200 shadow-sm overflow-hidden group">
+            <div className="relative h-64 overflow-hidden bg-stone-200">
+              {/* Replace /property1.jpg with your photo path in public/ or an image URL */}
+              <img 
+                src="/property1.jpg" 
+                alt="Swan Ocean Stays Luxury Property" 
+                className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              />
+            </div>
+            
+            <div className="p-6 space-y-4">
+              <div className="flex justify-between items-start">
+                <div>
+                  <span className="text-[10px] uppercase tracking-widest text-stone-400 font-semibold block">Vilano Beach</span>
+                  <h3 className="text-xl font-serif text-stone-800 font-medium">The Coastal Haven</h3>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-4 text-xs text-stone-500 border-y border-stone-100 py-3">
+                <span>4 Guests</span>
+                <span>•</span>
+                <span>2 Bedrooms</span>
+                <span>•</span>
+                <span>2 Baths</span>
+              </div>
+
+              <p className="text-stone-600 text-sm font-light leading-relaxed">
+                A serene oceanfront retreat featuring panoramic water views, modern luxury finishes, and private beach access.
+              </p>
+
+              <div className="pt-2 flex flex-col sm:flex-row gap-3">
+                {/* REPLACE THE '#' BELOW WITH YOUR ACTUAL AIRBNB LISTING URL */}
+                <a 
+                  href="airbnb.com/h/swanocean" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex-1 text-center bg-stone-800 hover:bg-stone-900 text-white text-xs uppercase tracking-wider py-3 transition font-medium"
+                >
+                  Book on Airbnb
+                </a>
+                <a 
+                  href="#owners" 
+                  className="flex-1 text-center border border-stone-300 hover:bg-stone-50 text-stone-800 text-xs uppercase tracking-wider py-3 transition font-medium"
+                >
+                  Direct Inquiry
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Value Proposition / Services */}
       <section id="services" className="py-20 px-6 max-w-7xl mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
