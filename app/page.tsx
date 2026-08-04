@@ -10,7 +10,21 @@ export default function Home() {
   const [address, setAddress] = useState("");
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [showDropdown, setShowDropdown] = useState(false);
+// Phone Formatting State & Function
+  const [phone, setPhone] = useState("");
 
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const digits = e.target.value.replace(/\D/g, "").slice(0, 10);
+    let formatted = digits;
+    if (digits.length > 6) {
+      formatted = `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
+    } else if (digits.length > 3) {
+      formatted = `(${digits.slice(0, 3)}) ${digits.slice(3)}`;
+    } else if (digits.length > 0) {
+      formatted = `(${digits}`;
+    }
+    setPhone(formatted);
+  };
   const handleAddressChange = async (input: string) => {
     setAddress(input);
     if (input.length < 3) {
@@ -261,7 +275,15 @@ export default function Home() {
               </div>
               <div>
                 <label className="block text-xs uppercase tracking-wider text-stone-600 mb-2 font-medium">Phone Number</label>
-                <input type="tel" name="phone" className="w-full border border-stone-300 p-3 text-sm focus:outline-none focus:border-stone-500" placeholder="(904) 555-0123" />
+                <input
+                  type="tel"
+                  name="phone"
+                  value={phone}
+                  onChange={handlePhoneChange}
+                  maxLength={14}
+                  className="w-full border border-stone-300 p-3 text-sm focus:outline-none focus:border-stone-500"
+                  placeholder="(904) 555-0123"
+                />
               </div>
             </div>
 
@@ -275,7 +297,7 @@ export default function Home() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-stone-800 hover:bg-stone-900 text-white text-sm uppercase tracking-widest py-4 transition font-medium disabled:bg-stone-400"
+              className="w-full bg-stone-800 hover:bg-stone-900 text-white text-sm uppercase tracking-widest py-4 transition font-medium cursor-pointer disabled:bg-stone-400"
             >
               {isSubmitting ? "Sending..." : "Request Free Analysis"}
             </button>
