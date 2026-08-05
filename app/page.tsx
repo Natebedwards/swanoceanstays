@@ -156,11 +156,65 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Guest Reviews / Social Proof Section */}
+      <section className="py-20 px-6 max-w-7xl mx-auto border-t border-stone-200">
+        <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
+          <span className="text-xs uppercase tracking-[0.3em] text-stone-500 font-medium block">Guest Experiences</span>
+          <h2 className="text-3xl font-serif text-stone-800">5-Star Guest Hospitality</h2>
+          <div className="h-px w-16 bg-stone-400 mx-auto"></div>
+          <p className="text-stone-500 font-light">See what guests are saying about their stays at Swan Ocean properties.</p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 text-left">
+          {/* Review 1 - Frank */}
+          <div className="bg-white p-8 border border-stone-200 shadow-sm flex flex-col justify-between space-y-6">
+            <div className="space-y-4">
+              <div className="flex text-amber-500 text-xs">★ ★ ★ ★ ★</div>
+              <p className="text-stone-600 text-sm font-light leading-relaxed italic">
+                &ldquo;Our host described his home perfectly, it was immaculately clean, especially considering it is right on the beach. Nathanael provided very easy and clear instructions and very helpful local recommendations.&rdquo;
+              </p>
+            </div>
+            <div className="border-t border-stone-100 pt-4 flex items-center justify-between text-xs">
+              <span className="font-medium text-stone-800">Frank</span>
+              <span className="text-stone-400">Verified Guest • Airbnb</span>
+            </div>
+          </div>
+
+          {/* Review 2 - Lily */}
+          <div className="bg-white p-8 border border-stone-200 shadow-sm flex flex-col justify-between space-y-6">
+            <div className="space-y-4">
+              <div className="flex text-amber-500 text-xs">★ ★ ★ ★ ★</div>
+              <p className="text-stone-600 text-sm font-light leading-relaxed italic">
+                &ldquo;We LOVED staying at Swan Ocean for a fun and chill girls trip. The house was so beautiful with the most amazing view. Everything was super clean and Nathanael was very responsive when we had questions. 10/10 recommend!&rdquo;
+              </p>
+            </div>
+            <div className="border-t border-stone-100 pt-4 flex items-center justify-between text-xs">
+              <span className="font-medium text-stone-800">Lily</span>
+              <span className="text-stone-400">Verified Guest • Airbnb</span>
+            </div>
+          </div>
+
+          {/* Review 3 - Jesse */}
+          <div className="bg-white p-8 border border-stone-200 shadow-sm flex flex-col justify-between space-y-6">
+            <div className="space-y-4">
+              <div className="flex text-amber-500 text-xs">★ ★ ★ ★ ★</div>
+              <p className="text-stone-600 text-sm font-light leading-relaxed italic">
+                &ldquo;The house couldn&apos;t have been more perfect. The inside was spacious, the back patio was perfect and being right on the beach is hard to beat! I can&apos;t recommend Nathanael and this house enough.&rdquo;
+              </p>
+            </div>
+            <div className="border-t border-stone-100 pt-4 flex items-center justify-between text-xs">
+              <span className="font-medium text-stone-800">Jesse</span>
+              <span className="text-stone-400">Verified Guest • Airbnb</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
 {/* Featured Properties Section */}
       <section id="properties" className="py-20 px-6 max-w-7xl mx-auto border-t border-stone-200">
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
           <span className="text-xs uppercase tracking-[0.3em] text-stone-500 font-medium block">Our Portfolio</span>
-          <h2 className="text-3xl font-serif text-stone-800">Featured Stays</h2>
+          <h2 className="text-3xl font-serif text-stone-800">Featured Stay</h2>
           <div className="h-px w-16 bg-stone-400 mx-auto"></div>
           <p className="text-stone-500 font-light">Explore our luxury coastal accommodations in St. Augustine &amp; Vilano Beach.</p>
         </div>
