@@ -124,6 +124,37 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
+      {/* Superhost & Reviews Trust Bar */}
+      <section className="bg-white border-b border-stone-200 py-8 px-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center items-center divide-y md:divide-y-0 md:divide-x divide-stone-200">
+          
+          {/* Rating Badge */}
+          <div className="space-y-1 py-2 md:py-0">
+            <div className="flex justify-center items-center space-x-1 text-amber-500 text-sm">
+              ★ ★ ★ ★ ★
+            </div>
+            <p className="text-2xl font-serif text-stone-800 font-medium">4.89 / 5.0</p>
+            <span className="text-[10px] uppercase tracking-[0.25em] text-stone-500 font-medium block">Average Guest Rating</span>
+          </div>
+
+          {/* Superhost Status Badge */}
+          <div className="space-y-1 py-2 md:py-0">
+            <div className="inline-block bg-stone-100 text-stone-800 text-[9px] font-semibold uppercase tracking-widest px-3 py-0.5 border border-stone-300 rounded-full mb-1">
+              Verified Airbnb
+            </div>
+            <p className="text-2xl font-serif text-stone-800 font-medium">Superhost Status</p>
+            <span className="text-[10px] uppercase tracking-[0.25em] text-stone-500 font-medium block">Top Tier Hospitality</span>
+          </div>
+
+          {/* Local Experience */}
+          <div className="space-y-1 py-2 md:py-0">
+            <p className="text-2xl font-serif text-stone-800 font-medium">Boutique Care</p>
+            <span className="text-[10px] uppercase tracking-[0.25em] text-stone-500 font-medium block">St. Augustine &amp; Vilano Beach</span>
+          </div>
+
+        </div>
+      </section>
 
 {/* Featured Properties Section */}
       <section id="properties" className="py-20 px-6 max-w-7xl mx-auto border-t border-stone-200">
