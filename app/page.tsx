@@ -219,6 +219,58 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
+      {/* FAQ Section */}
+      <section className="py-20 px-6 max-w-6xl mx-auto border-t border-stone-200">
+        <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
+          <span className="text-xs uppercase tracking-[0.3em] text-stone-500 font-medium block">Owner Information</span>
+          <h2 className="text-3xl font-serif text-stone-800">Frequently Asked Questions</h2>
+          <div className="h-px w-16 bg-stone-400 mx-auto"></div>
+          <p className="text-stone-500 font-light">Everything you need to know about partnering with Swan Ocean Stays.</p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 text-left">
+          {/* FAQ 1 */}
+          <div className="bg-white p-8 border border-stone-200 shadow-sm space-y-3">
+            <h3 className="font-serif text-xl text-stone-800 font-medium">What are your management fees?</h3>
+            <p className="text-stone-600 text-sm font-light leading-relaxed">
+              Our boutique management fees start at 15%. We operate strictly on a performance-based model, meaning we only make money when your property generates revenue—with zero setup costs or hidden fees.
+            </p>
+          </div>
+
+          {/* FAQ 2 */}
+          <div className="bg-white p-8 border border-stone-200 shadow-sm space-y-3">
+            <h3 className="font-serif text-xl text-stone-800 font-medium">How are property maintenance and repairs handled?</h3>
+            <p className="text-stone-600 text-sm font-light leading-relaxed">
+              I personally conduct routine inspections and handle minor maintenance items myself to keep overhead low. If a repair requires a specialized specialist, I personally coordinate and oversee trusted local contractors on-site.
+            </p>
+          </div>
+
+          {/* FAQ 3 */}
+          <div className="bg-white p-8 border border-stone-200 shadow-sm space-y-3">
+            <h3 className="font-serif text-xl text-stone-800 font-medium">How do you manage turnover cleaning between guest stays?</h3>
+            <p className="text-stone-600 text-sm font-light leading-relaxed">
+              We partner exclusively with a dedicated short-term rental cleaning team that I have worked with for over 10 years. Every turnover is scheduled seamlessly and inspected to maintain pristine, 5-star hospitality standards.
+            </p>
+          </div>
+
+          {/* FAQ 4 */}
+          <div className="bg-white p-8 border border-stone-200 shadow-sm space-y-3">
+            <h3 className="font-serif text-xl text-stone-800 font-medium">What if my property is already on Airbnb? Will I lose reviews?</h3>
+            <p className="text-stone-600 text-sm font-light leading-relaxed">
+              Not at all. You can simply add us as a Co-Host to your existing listing. This preserves 100% of your guest reviews, search rankings, and listing history while giving us full operational capability.
+            </p>
+          </div>
+
+          {/* FAQ 5 - Full Width Span on Desktop */}
+          <div className="bg-white p-8 border border-stone-200 shadow-sm space-y-3 md:col-span-2">
+            <h3 className="font-serif text-xl text-stone-800 font-medium">How do I track earnings and reserve dates for personal use?</h3>
+            <p className="text-stone-600 text-sm font-light leading-relaxed">
+              We provide monthly financial statements detailing your earnings alongside a live availability calendar. You retain complete visibility and can easily block off dates for personal or family stays whenever you choose.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Lead Capture Form Section */}
       <section id="owners" className="bg-stone-100 py-20 px-6">
