@@ -212,9 +212,9 @@ export default function Home() {
             </p>
           </div>
           <div className="space-y-4">
-            <h3 className="text-xl font-serif text-stone-800">Dynamic Pricing Revenue</h3>
+            <h3 className="text-xl font-serif text-stone-800">Custom Pricing Revenue</h3>
             <p className="text-stone-600 font-light leading-relaxed">
-              Our software updates your rates daily based on real-time market demand in St. Augustine to maximize your annual returns.
+              We update your rates daily based on real-time market demand in St. Augustine to maximize your annual returns.
             </p>
           </div>
         </div>
@@ -363,9 +363,42 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-stone-200 py-8 px-6 text-center text-xs text-stone-400 uppercase tracking-wider">
-        © {new Date().getFullYear()} Swan Ocean Stays. All rights reserved.
+      {/* Enhanced Footer */}
+      <footer className="border-t border-stone-200 bg-stone-900 text-white py-16 px-6">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10 text-left">
+          {/* Brand Column */}
+          <div className="space-y-3">
+            <span className="font-serif text-lg tracking-[0.2em] block">SWAN OCEAN STAYS</span>
+            <p className="text-stone-400 text-xs font-light leading-relaxed max-w-sm">
+              Boutique vacation rental management and luxury coastal accommodations across St. Augustine &amp; Vilano Beach, Florida.
+            </p>
+          </div>
+
+          {/* Quick Links Column */}
+          <div className="space-y-3 text-xs tracking-wider text-stone-300 uppercase">
+            <span className="text-stone-500 font-medium block">Quick Links</span>
+            <div className="flex flex-col space-y-2">
+              <a href="#properties" className="hover:text-white transition">Properties</a>
+              <a href="#services" className="hover:text-white transition">Services</a>
+              <a href="#owners" className="hover:text-white transition">For Owners</a>
+              <a href="#contact" className="hover:text-white transition">Contact Us</a>
+            </div>
+          </div>
+
+          {/* Contact Column */}
+          <div className="space-y-3 text-xs text-stone-300">
+            <span className="text-stone-500 uppercase tracking-wider font-medium block">Get in Touch</span>
+            <p className="font-light">St. Augustine &amp; Vilano Beach, FL</p>
+            {/* Update the phone number and email below to your real ones */}
+            <p className="font-light">Direct: (904) 803-6535</p>
+            <p className="font-light">Email: info@swanoceanstays.com</p>
+          </div>
+        </div>
+
+        {/* Copyright Bar */}
+        <div className="max-w-7xl mx-auto border-t border-stone-800 mt-12 pt-8 text-center text-xs text-stone-500 font-light">
+          © {new Date().getFullYear()} Swan Ocean Stays Hospitality. All rights reserved.
+        </div>
       </footer>
     </div>
   );
