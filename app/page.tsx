@@ -219,9 +219,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
+
       {/* FAQ Section */}
-      <section className="py-20 px-6 max-w-6xl mx-auto border-t border-stone-200">
+      <section id="contact" className="py-20 px-6 max-w-6xl mx-auto border-t border-stone-200">
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
           <span className="text-xs uppercase tracking-[0.3em] text-stone-500 font-medium block">Owner Information</span>
           <h2 className="text-3xl font-serif text-stone-800">Frequently Asked Questions</h2>
@@ -242,7 +242,7 @@ export default function Home() {
           <div className="bg-white p-8 border border-stone-200 shadow-sm space-y-3">
             <h3 className="font-serif text-xl text-stone-800 font-medium">How are property maintenance and repairs handled?</h3>
             <p className="text-stone-600 text-sm font-light leading-relaxed">
-              I personally conduct routine inspections and handle minor maintenance items myself to keep overhead low. If a repair requires a specialized specialist, I personally coordinate and oversee trusted local contractors on-site.
+              I personally conduct routine inspections and handle minor maintenance items myself to keep overhead low. If a repair requires a specialist, I personally coordinate and oversee trusted local contractors on-site.
             </p>
           </div>
 
@@ -273,7 +273,7 @@ export default function Home() {
       </section>
 
       {/* Lead Capture Form Section */}
-      <section id="owners" className="bg-stone-100 py-20 px-6">
+      <section id="contact" className="bg-stone-100 py-20 px-6">
         <div className="max-w-3xl mx-auto bg-white p-8 md:p-12 shadow-sm border border-stone-200">
           <div className="text-center mb-8 space-y-2">
             <h2 className="text-2xl md:text-3xl font-serif text-stone-800">What is your home&apos;s earning potential?</h2>
