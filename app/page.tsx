@@ -319,7 +319,7 @@ export default function Home() {
           <div className="bg-white p-8 border border-stone-200 shadow-sm space-y-3">
             <h3 className="font-serif text-xl text-stone-800 font-medium">What are your management fees?</h3>
             <p className="text-stone-600 text-sm font-light leading-relaxed">
-              Our boutique management fees start at 15%. We operate strictly on a performance-based model, meaning we only make money when your property generates revenue—with zero setup costs or hidden fees.
+              Our boutique management fees start at 17%. We operate strictly on a performance-based model, meaning we only make money when your property generates revenue—with zero setup costs or hidden fees.
             </p>
           </div>
 
