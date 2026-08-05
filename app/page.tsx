@@ -171,7 +171,7 @@ export default function Home() {
             <div className="space-y-4">
               <div className="flex text-amber-500 text-xs">★ ★ ★ ★ ★</div>
               <p className="text-stone-600 text-sm font-light leading-relaxed italic">
-                &ldquo;Our host described his home perfectly, it was immaculately clean, especially considering it is right on the beach. Nathanael provided very easy and clear instructions and very helpful local recommendations.&rdquo;
+                &ldquo;Our host, Nathanael, described his home perfectly, it was immaculately clean, especially considering it is right on the beach. It was absolutely beautiful. Nathanael provided very easy and clear instructions and very helpful local recommendations. We had dinner at 2 of those restaurant recommendations and they were excellent, different experiences, but both excellent. He was very responsive and respectful. If my travels take me to that area again I will be a return customer.&rdquo;
               </p>
             </div>
             <div className="border-t border-stone-100 pt-4 flex items-center justify-between text-xs">
@@ -185,7 +185,7 @@ export default function Home() {
             <div className="space-y-4">
               <div className="flex text-amber-500 text-xs">★ ★ ★ ★ ★</div>
               <p className="text-stone-600 text-sm font-light leading-relaxed italic">
-                &ldquo;We LOVED staying at Swan Ocean for a fun and chill girls trip. The house was so beautiful with the most amazing view. Everything was super clean and Nathanael was very responsive when we had questions. 10/10 recommend!&rdquo;
+                &ldquo;We LOVED staying at Swan Ocean for a fun and chill girls trip. The house was so beautiful with the most amazing view. Everything was super clean and Nathanael was very responsive when we had questions. We lucked out with a beautiful week and couldn&apos;t have asked for a better experience! 10/10 recommend this Airbnb if you&apos;re looking in St. Augustine!&rdquo;
               </p>
             </div>
             <div className="border-t border-stone-100 pt-4 flex items-center justify-between text-xs">
@@ -199,7 +199,7 @@ export default function Home() {
             <div className="space-y-4">
               <div className="flex text-amber-500 text-xs">★ ★ ★ ★ ★</div>
               <p className="text-stone-600 text-sm font-light leading-relaxed italic">
-                &ldquo;The house couldn&apos;t have been more perfect. The inside was spacious, the back patio was perfect and being right on the beach is hard to beat! I can&apos;t recommend Nathanael and this house enough.&rdquo;
+                &ldquo;We stayed at the house for a weekend celebrating my brother getting married this year. We had 7 of us and the house couldn&apos;t have been more perfect. The inside was spacious, the rooms worked great for the amount of people we had, the grill worked, the back patio was perfect and being right on the beach is hard to beat! We even had a Hibachi chef come one of the nights and set up on the back deck. I can&apos;t recommend Nathaniel and this house enough.&rdquo;
               </p>
             </div>
             <div className="border-t border-stone-100 pt-4 flex items-center justify-between text-xs">
