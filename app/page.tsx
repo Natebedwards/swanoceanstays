@@ -221,7 +221,7 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section id="contact" className="py-20 px-6 max-w-6xl mx-auto border-t border-stone-200">
+      <section id="owners" className="py-20 px-6 max-w-6xl mx-auto border-t border-stone-200">
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
           <span className="text-xs uppercase tracking-[0.3em] text-stone-500 font-medium block">Owner Information</span>
           <h2 className="text-3xl font-serif text-stone-800">Frequently Asked Questions</h2>
