@@ -305,6 +305,62 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Meet the Founder Section */}
+      <section className="py-20 px-6 max-w-6xl mx-auto border-t border-stone-200">
+        <div className="grid md:grid-cols-12 gap-12 items-center">
+          
+          {/* Headshot Column */}
+          <div className="md:col-span-5 relative">
+            <div className="relative aspect-square overflow-hidden bg-stone-200 border border-stone-200 shadow-sm">
+              <img 
+                src="/nathan-headshot.jpg" 
+                alt="Nathan Edwards - Founder of Swan Ocean Stays" 
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
+            {/* Dark Accent Title Bar */}
+            <div className="mt-3 bg-stone-900 text-white p-4 text-center">
+              <p className="font-serif text-base tracking-wide">Nathan Edwards</p>
+              <p className="text-[10px] uppercase tracking-[0.25em] text-stone-400 mt-0.5">Founder &amp; Local Operator</p>
+            </div>
+          </div>
+
+          {/* Bio Content Column */}
+          <div className="md:col-span-7 space-y-6 text-left">
+            <div className="space-y-2">
+              <span className="text-xs uppercase tracking-[0.3em] text-stone-500 font-medium block">Boutique Leadership</span>
+              <h2 className="text-3xl md:text-4xl font-serif text-stone-800">Meet the Founder</h2>
+              <div className="h-px w-16 bg-stone-400"></div>
+            </div>
+
+            <div className="space-y-4 text-stone-600 text-sm md:text-base font-light leading-relaxed">
+              <p>
+                Hi, I&apos;m Nathan. I founded Swan Ocean Stays with a straightforward mission: to provide property owners in St. Augustine and Vilano Beach with a truly hands-on, high-touch alternative to big-box management corporations.
+              </p>
+              <p>
+                Rather than handing your home off to a remote account manager or distant call center, I personally handle operations on the ground. From inspecting every turnover alongside our dedicated cleaning team to performing routine maintenance and adjusting prices daily for optimal revenue, I oversee every detail as if the property were my own.
+              </p>
+              <p>
+                When you partner with Swan Ocean Stays, you get direct founder accountability, total operational transparency, and a committed local partner dedicated to maximizing your investment.
+              </p>
+            </div>
+
+            {/* Direct Contact Bar */}
+            <div className="pt-4 border-t border-stone-200 grid grid-cols-2 gap-4 text-xs font-medium text-stone-800 tracking-wider uppercase">
+              <div>
+                <span className="text-stone-400 block text-[10px]">Direct Cell</span>
+                <a href="tel:9048036535" className="hover:text-stone-600 transition">(904) 803-6535</a>
+              </div>
+              <div>
+                <span className="text-stone-400 block text-[10px]">Email</span>
+                <a href="mailto:nathan@swanoceanstays.com" className="hover:text-stone-600 transition">nathan@swanoceanstays.com</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section id="owners" className="py-20 px-6 max-w-6xl mx-auto border-t border-stone-200">
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
