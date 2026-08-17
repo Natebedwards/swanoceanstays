@@ -305,6 +305,61 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Real Estate Acquisition & Investor Services */}
+      <section className="py-20 px-6 bg-stone-900 text-white">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-12 gap-12 items-center">
+          
+          <div className="md:col-span-7 space-y-6 text-left">
+            <span className="text-xs uppercase tracking-[0.3em] text-amber-400 font-medium block">
+              Real Estate &amp; Investment Services
+            </span>
+            <h2 className="text-3xl md:text-4xl font-serif leading-tight">
+              Looking to Buy an Airbnb in St. Augustine or Vilano Beach?
+            </h2>
+            <div className="h-px w-16 bg-amber-400"></div>
+            
+            <p className="text-stone-300 text-sm md:text-base font-light leading-relaxed">
+              Don&apos;t buy blindly. With <strong>12 years of licensed real estate experience</strong> in Northeast Florida, I help investors identify, underwrite, and acquire top-performing vacation properties before turning them into seamless, 5-star rentals.
+            </p>
+
+            <ul className="space-y-3 text-sm text-stone-300 font-light">
+              <li className="flex items-center space-x-3">
+                <span className="text-amber-400 font-bold">✓</span>
+                <span><strong>Zoning &amp; Licensing Insight:</strong> Navigate local short-term rental regulations with zero guesswork.</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <span className="text-amber-400 font-bold">✓</span>
+                <span><strong>Data-Backed Pro Formas:</strong> Real revenue analysis based on actual market performance, not broker fluff.</span>
+              </li>
+              <li className="flex items-center space-x-3">
+                <span className="text-amber-400 font-bold">✓</span>
+                <span><strong>Turnkey Day-One Management:</strong> Transition directly from closing day straight to live bookings.</span>
+              </li>
+            </ul>
+
+            <div className="pt-4">
+              <a 
+                href="#contact" 
+                className="inline-block bg-amber-500 hover:bg-amber-400 text-stone-900 font-medium text-xs uppercase tracking-widest px-8 py-4 transition shadow-sm"
+              >
+                Schedule an Acquisition Consultation
+              </a>
+            </div>
+          </div>
+
+          <div className="md:col-span-5 bg-stone-800 p-8 border border-stone-700 space-y-6 text-left">
+            <h3 className="font-serif text-xl text-white">The Turnkey Investor Advantage</h3>
+            <p className="text-xs text-stone-400 leading-relaxed font-light">
+              &ldquo;Having Nathan represent us on the purchase and immediately onboard the home onto Swan Ocean Stays saved us months of setup time and guaranteed we met all St. Johns County rental compliance from day one.&rdquo;
+            </p>
+            <div className="border-t border-stone-700 pt-4 text-xs text-amber-400">
+              Licensed Florida Real Estate Agent • 12+ Years Experience • Keller Williams St Johns
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       {/* Meet the Founder Section */}
       <section className="py-20 px-6 max-w-6xl mx-auto border-t border-stone-200">
         <div className="grid md:grid-cols-12 gap-12 items-center">
@@ -336,6 +391,10 @@ export default function Home() {
             <div className="space-y-4 text-stone-600 text-sm md:text-base font-light leading-relaxed">
               <p>
                 Hi, I&apos;m Nathan. I founded Swan Ocean Stays with a straightforward mission: to provide property owners in St. Augustine and Vilano Beach with a truly hands-on, high-touch alternative to big-box management corporations.
+              </p>
+              {/* Updated paragraph in Meet the Founder */}
+              <p>
+                With 12 years of experience as a licensed real estate agent paired with hands-on hospitality management, I offer property owners a true end-to-end investment strategy. From identifying high-yield coastal properties and navigating local short-term rental zoning in St. Augustine and Vilano Beach, to managing every turnover on the ground, I oversee every detail as if the property were my own.
               </p>
               <p>
                 Rather than handing your home off to a remote account manager or distant call center, I personally handle operations on the ground. From inspecting every turnover alongside our dedicated cleaning team to performing routine maintenance and adjusting prices daily for optimal revenue, I oversee every detail as if the property were my own.
@@ -530,15 +589,17 @@ export default function Home() {
           <div className="space-y-3 text-xs text-stone-300">
             <span className="text-stone-500 uppercase tracking-wider font-medium block">Get in Touch</span>
             <p className="font-light">St. Augustine &amp; Vilano Beach, FL</p>
-            {/* Update the phone number and email below to your real ones */}
             <p className="font-light">Direct: (904) 803-6535</p>
             <p className="font-light">Email: info@swanoceanstays.com</p>
           </div>
         </div>
 
-        {/* Copyright Bar */}
-        <div className="max-w-7xl mx-auto border-t border-stone-800 mt-12 pt-8 text-center text-xs text-stone-500 font-light">
-          © {new Date().getFullYear()} Swan Ocean Stays Hospitality. All rights reserved.
+        {/* Copyright Bar & Brokerage Disclosure */}
+        <div className="max-w-7xl mx-auto border-t border-stone-800 mt-12 pt-8 text-center text-xs text-stone-500 font-light space-y-2">
+          <p>© {new Date().getFullYear()} Swan Ocean Stays Hospitality. All rights reserved.</p>
+          <p className="text-[11px] text-stone-400">
+            Nathan Edwards is a licensed Florida Real Estate Agent affiliated with Keller Williams St Johns.
+          </p>
         </div>
       </footer>
     </div>
