@@ -81,41 +81,45 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-[#faf9f6] text-[#2c3e50] font-sans">
+<div className="min-h-screen bg-[#faf9f6] text-[#2c3e50] font-sans">
       {/* Navigation */}
       <nav className="border-b border-stone-200 bg-white/80 backdrop-blur-md sticky top-0 z-50 px-6 py-4 flex justify-between items-center">
-  {/* Luxury Wordmark Logo - Click to Scroll Top */}
-  <a 
-{/* Brand Logo & Name */}
-          <Link href="/" className="flex items-center space-x-3">
-            <img 
-              src="/Swan-logo.png" 
-              alt="Swan Ocean Stays Logo" 
-              className="h-10 w-auto object-contain" 
-            />
-            <div className="flex flex-col">
-              <span className="font-serif text-lg tracking-widest text-stone-900 leading-tight">
-                SWAN OCEAN STAYS
-              </span>
-              <span className="text-[8px] uppercase tracking-[0.3em] text-stone-500 font-light">
-                HOSPITALITY
-              </span>
-            </div>
-          </Link>
-  </a>
+        {/* Luxury Wordmark Logo - Click to Scroll Top */}
+        <a 
+          href="#" 
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+          className="flex items-center space-x-3 select-none cursor-pointer hover:opacity-80 transition"
+        >
+          <img 
+            src="/Swan-logo.png" 
+            alt="Swan Ocean Stays Logo" 
+            className="h-10 w-auto object-contain" 
+          />
+          <div className="flex flex-col items-start">
+            <span className="text-xl md:text-2xl font-serif tracking-[0.25em] font-light text-stone-900 leading-none">
+              SWAN OCEAN STAYS
+            </span>
+            <span className="text-[9px] uppercase tracking-[0.42em] text-stone-500 mt-1.5 font-medium pl-0.5">
+              HOSPITALITY
+            </span>
+          </div>
+        </a>
 
-  <div className="hidden md:flex space-x-6 lg:space-x-8 text-sm uppercase tracking-wider text-stone-600">
-    <a href="#properties" className="hover:text-stone-900 transition">Properties</a>
-    <a href="#services" className="hover:text-stone-900 transition">Services</a>
-    <a href="#owners" className="hover:text-stone-900 transition">For Owners</a>
-    <a href="#reservation" className="hover:text-stone-900 transition">Make a Reservation</a>
-    <a href="#contact" className="hover:text-stone-900 transition">Contact</a>
-  </div>
+        <div className="hidden md:flex space-x-6 lg:space-x-8 text-sm uppercase tracking-wider text-stone-600">
+          <a href="#properties" className="hover:text-stone-900 transition">Properties</a>
+          <a href="#services" className="hover:text-stone-900 transition">Services</a>
+          <a href="#owners" className="hover:text-stone-900 transition">For Owners</a>
+          <a href="#reservation" className="hover:text-stone-900 transition">Make a Reservation</a>
+          <a href="#contact" className="hover:text-stone-900 transition">Contact</a>
+        </div>
 
-  <a href="#owners" className="bg-stone-800 hover:bg-stone-900 text-white text-xs uppercase tracking-wider px-5 py-2.5 transition">
-    Get a Revenue Estimate
-  </a>
-</nav>
+        <a href="#owners" className="bg-stone-800 hover:bg-stone-900 text-white text-xs uppercase tracking-wider px-5 py-2.5 transition">
+          Get a Revenue Estimate
+        </a>
+      </nav>
 
       {/* Hero Section */}
       <section className="relative h-[80vh] flex items-center justify-center bg-stone-900 text-white px-6">
