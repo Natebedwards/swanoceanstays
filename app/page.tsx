@@ -86,19 +86,22 @@ export default function Home() {
       <nav className="border-b border-stone-200 bg-white/80 backdrop-blur-md sticky top-0 z-50 px-6 py-4 flex justify-between items-center">
   {/* Luxury Wordmark Logo - Click to Scroll Top */}
   <a 
-    href="#" 
-    onClick={(e) => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }}
-    className="flex flex-col items-start select-none cursor-pointer hover:opacity-80 transition"
-  >
-    <span className="text-xl md:text-2xl font-serif tracking-[0.25em] font-light text-stone-900 leading-none">
-      SWAN OCEAN STAYS
-    </span>
-    <span className="text-[9px] uppercase tracking-[0.42em] text-stone-500 mt-1.5 font-medium pl-0.5">
-      HOSPITALITY
-    </span>
+{/* Brand Logo & Name */}
+          <Link href="/" className="flex items-center space-x-3">
+            <img 
+              src="/Swan-logo.png" 
+              alt="Swan Ocean Stays Logo" 
+              className="h-10 w-auto object-contain" 
+            />
+            <div className="flex flex-col">
+              <span className="font-serif text-lg tracking-widest text-stone-900 leading-tight">
+                SWAN OCEAN STAYS
+              </span>
+              <span className="text-[8px] uppercase tracking-[0.3em] text-stone-500 font-light">
+                HOSPITALITY
+              </span>
+            </div>
+          </Link>
   </a>
 
   <div className="hidden md:flex space-x-6 lg:space-x-8 text-sm uppercase tracking-wider text-stone-600">
