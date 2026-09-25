@@ -15,6 +15,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Swan Ocean Stays | Luxury Vacation Rental Management",
   description: "Elevated vacation rental management in St. Augustine and Vilano Beach.",
+  icons: {
+    icon: "/Swan-logo.png",
+    apple: "/Swan-logo.png",
+  },
 };
 
 export default function RootLayout({
