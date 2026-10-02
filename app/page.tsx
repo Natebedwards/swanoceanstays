@@ -112,9 +112,14 @@ export default function Home() {
           <a href="#properties" className="hover:text-stone-900 transition">Properties</a>
           <a href="#services" className="hover:text-stone-900 transition">Services</a>
           <a href="#owners" className="hover:text-stone-900 transition">For Owners</a>
-          <a href="#reservation" className="hover:text-stone-900 transition">Make a Reservation</a>
+          <a href="https://book.hostfully.com/swan-ocean-stays" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="hover:text-stone-900 transition">Make a Reservation</a>
           <a href="#contact" className="hover:text-stone-900 transition">Contact</a>
         </div>
+    
+    <a href="#contact" className="hover:text-stone-900 transition">Contact</a>
 
         <a href="#owners" className="bg-stone-800 hover:bg-stone-900 text-white text-xs uppercase tracking-wider px-5 py-2.5 transition">
           Get a Revenue Estimate
